@@ -1,3 +1,15 @@
+# For API keys or connections to db, uncomment these files as needed
+# config.py is used to connect all_articles_final to local postgres
+config.py
+# config.js
+
+# Files exceed 100MB and can't be pushed to a free GitHub account
+class_model.sav
+pickle_model.sav
+pickle_model02.sav
+all_articles.csv
+all_articles_final.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
