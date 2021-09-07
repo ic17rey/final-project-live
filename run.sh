@@ -1,0 +1,1 @@
+FLASK_APP=news_predictor/app.py flask run

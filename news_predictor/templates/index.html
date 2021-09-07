@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Fake News Predictor</title>
+
+    <!-- Bring in Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+</head>
+
+<body style=font-family:helvetica;>
+    <!-- Navigation bar at the top of the page -->
+    <div class="navigation">
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: teal; font-family:helvetica;">
+            <!-- This is the title of the site that also takes you back to the landing page when clicked. -->
+            <a class="navbar-brand" style="color:white; font-size: 26px;" href="./">Fake News Predictor</a>
+        </nav>
+
+    </div>
+    
+    <div class="container">
+        <div class="row p-4" style="background-color:palegoldenrod; font-family:helvetica;">
+            <div class="col-12 container_intro" >
+                <div class="box skyblue">
+                    <h2 style="text-align: center;">Welcome to the Fake News Predictor!</h2>
+                    <p>This page uses a machine learning algorithm trained with the 2016-2017 ISOT Fake News dataset to allow you to predict whether any article you paste in the form below is true or fake. Paste the text of the article of your choosing into the text field and click "Submit". The page also displays word clouds showing the most common words in both the true and fake news articles contained in the dataset used to train the model.
+                    </p>
+                </div>
+            </div>
+        </div>        
+        <div class="row">
+            
+            <!-- This box shows the word cloud. -->
+            <div class="col-lg-8 col-md-8 col-sm-12 mt-4">
+                <div class="box skyblue">
+                    <h4>Most Common Words in Fake News Articles</h4>
+                    <img id="fake-wordcloud" class="float img-fluid" src="/static/fake_news_cloud.png">
+                    <h4>Most Common Words in True News Articles</h4>
+                    <img id="true-wordcloud" class="float img-fluid" src="/static/true_news_cloud.png">
+                </div>
+            </div>
+            <!-- This is the sidebar that contains the predictor elements. -->
+            <div class="col-lg-4 col-md-4 col-sm-12 mt-4">
+                <div class="box skyblue p-4" style="background-color:rgb(243, 241, 241)">
+                    <h4 class="title"><br>Predictor</h4>
+                    <hr>
+                    <form method="POST" action="/send">
+                        <input type="text" name="variable">
+                        <input type="submit">
+                    </form>
+                    <br>
+                    <p style="font-size: 20px;">Model Prediction:</p>
+                    <p style="text-align: center; color:rgb(50, 158, 158); font-size: 30px">{{ results }}</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+   
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+
+
+</body>
+
+</html>
