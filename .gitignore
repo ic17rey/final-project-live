@@ -5,10 +5,17 @@ config.py
 
 # Files exceed 100MB and can't be pushed to a free GitHub account
 class_model.sav
+model.sav
+model_v2.sav
 pickle_model.sav
-pickle_model02.sav
+
+Fake.csv
+True.csv
 all_articles.csv
 all_articles_final.csv
+
+# First jupyter notebook with model > 100 MB
+create_model.ipynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
