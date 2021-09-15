@@ -10,6 +10,7 @@ The Fake News Predictor project uses scikit-learn machine learning to predict wh
 Data Source: [University of Victoria Engineering Data](https://www.uvic.ca/engineering/ece/isot/datasets/fake-news/index.php)
 * The model training was done following a merge of two CSV files, one containing news stories from reliable sources, labeled "true", and one containing news stories from unreliable sources, labeled "fake"
 * Unreliable news articles included in the CSV file of fake articles were from websites flagged by Politifact and Wikipedia as unreliable
+* The model resulting from training with this data results in testing at better than 97% 
 
 
 
