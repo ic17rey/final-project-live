@@ -5,10 +5,10 @@ import urllib.request
 import cloudpickle as cp
 
 # Downloading the ml model
-url = 'https://butlerunit22.s3.us-east-2.amazonaws.com/pckl_model.sav'
+#url = 'https://butlerunit22.s3.us-east-2.amazonaws.com/pckl_model.sav'
 dir = os.path.dirname(__file__)
 filename = os.path.join(dir, 'pckl_model.sav')
-urllib.request.urlretrieve(url, filename)
+#urllib.request.urlretrieve(url, filename)
 
 with open(filename, mode='rb') as file:
     model = cp.load(file)
